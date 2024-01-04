@@ -1,4 +1,4 @@
-import "./App.css";
+import "/styles/App.css";
 import styled from "styled-components";
 
 const Button = styled.button`
@@ -18,5 +18,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
