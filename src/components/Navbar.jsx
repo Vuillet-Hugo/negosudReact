@@ -1,3 +1,4 @@
+
 function Navbar() {
   return (
     <nav className="bg-white rounded-lg shadow-2xl border-gray-200 dark:bg-rose-900">
@@ -45,7 +46,7 @@ function Navbar() {
                 href="#"
                 className="py-2 px-3 text-white md:dark:hover:text-pink-400 md:p-0 "
                 aria-current="page"
-              >
+              > 
                 Produit
               </a>
             </li>
@@ -63,6 +64,14 @@ function Navbar() {
                 className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"
               >
                 Panier
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"
+              >
+                Nous contacter
               </a>
             </li>
           </ul>
