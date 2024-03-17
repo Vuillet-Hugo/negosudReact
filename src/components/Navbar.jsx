@@ -1,14 +1,23 @@
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import PageProduits from "./PageProduits";
+import ContactForm from "./ContactForm";
+import Panier from "./Panier/Panier";
+import Accueil from "./Accueil";
+import PageCarte from "./stripe/PageCarte";
+
 
 function Navbar() {
   return (
+    <BrowserRouter>
     <nav className="bg-white rounded-lg shadow-2xl border-gray-200 dark:bg-rose-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="./src/assets/logo.png" className="h-12" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap  md:hover:text-pink-500 dark:text-white">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap md:hover:text-pink-500 dark:text-white">
             Negosud
           </span>
-        </a>
+        </Link>
         <div className="flex md:order-2">
           <div className="relative hidden md:block">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -36,48 +45,38 @@ function Navbar() {
             />
           </div>
         </div>
-        <div
-          className="hidden w-full md:flex md:w-auto md:order-1"
-          id="navbar-search"
-        >
+        <div className="hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
           <ul className="flex p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:dark:bg-rose-900">
             <li>
-              <a
-                href="#"
-                className="py-2 px-3 text-white md:dark:hover:text-pink-400 md:p-0 "
-                aria-current="page"
-              > 
+              <Link to="/produits" className="py-2 px-3 text-white md:dark:hover:text-pink-400 md:p-0" aria-current="page"> 
                 Produit
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="py-2 px-3 md:p-0 md:dark:hover:text-pink-400  dark:text-white "
-              >
                 Mon compte
-              </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"
-              >
+              <Link to="/panier" className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"> 
                 Panier
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"
-              >
+              <Link to="/nouscontacter" className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"> 
                 Nous contacter
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/produits" element={<PageProduits />} />
+        <Route path="/nouscontacter" element={<ContactForm />} />
+        <Route path="/Panier" element={<Panier />} />
+        <Route path="/PageCarte" element={<PageCarte />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
