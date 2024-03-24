@@ -24,11 +24,11 @@ function CustomersReview() {
   ];
 
   return (
-    <div className="my-12 px-8 py-8"> {/* Augmentation des marges et des paddings */}
+    <div className="my-12 px-8 py-8"> 
       <h2 className="text-3xl font-bold text-center mb-8">Avis Clients</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> {/* Ajustement de l'espacement entre les cartes */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> 
         {reviews.map((review) => (
-          <div key={review.id} className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between"> {/* Ombre plus prononcée et padding augmenté */}
+          <div key={review.id} className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between"> 
             <div>
               <h3 className="text-xl font-semibold">{review.name} <span className="text-sm text-gray-500">{review.date}</span></h3>
               <StarRating rating={review.rating} />
