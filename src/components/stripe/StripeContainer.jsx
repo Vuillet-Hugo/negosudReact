@@ -8,7 +8,7 @@ const stripePromise = loadStripe('pk_test_51OtnE0J1QyQ5ngYKyhVfrybsAScR6acLnhOrV
 
 const Stripe = () => {
   return (
-    <Elements stripe={stripePromise}>
+    <Elements stripe={stripePromise} >
       <CheckoutForm />
     </Elements>
   );

@@ -35,6 +35,12 @@ const Panier = () => {
     0
   );
 
+  const produits = produitDansPanier.map((produit) => ({
+    id : produit.id,
+    quantite: produit.quantite
+  })
+  );
+  console.log(produits);
 
   return (
     <div className=" m-10 space-x-20 pe-10">
@@ -63,7 +69,7 @@ const Panier = () => {
                 </p>
               </div>
               <div className="flex justify-center mt-6 ">
-             <ButtonPanier />
+              <ButtonPanier produit={produits} />
               </div>
             </div>
           )}

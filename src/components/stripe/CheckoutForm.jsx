@@ -1,7 +1,9 @@
 import React from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
+
 const CheckoutForm = () => {
+
   const stripe = useStripe();
   const elements = useElements();
 
@@ -24,8 +26,8 @@ const CheckoutForm = () => {
 
 
   return(
-    <form onSubmit={handleSubmit}>
-        <CardElement>
+    <form onSubmit={handleSubmit} className="">
+        <CardElement className=" h-64 mr-0 p-12">
             options ={{hidePostalCode : true}}
             <button>Payer</button>
         </CardElement>

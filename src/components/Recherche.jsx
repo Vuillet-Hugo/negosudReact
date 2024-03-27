@@ -10,14 +10,14 @@ function Recherche({ onSearchChange }) {
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center md:uppercase">
         <input
           type="text"
           name="recherche"
           id="recherche"
           placeholder="Rechercher par mot-clé"
           onChange={handleSearchTerm}
-          className="block w-64 shadow-md p-2 ps-10 text-sm rounded-lg dark:bg-pink-800 dark:placeholder-pink-400 dark:text-white"
+          className="block max-w-64 shadow-md p-2 ps-10 text-sm rounded-lg dark:bg-pink-800 dark:placeholder-pink-400 dark:text-white"
         />
       </div>
     </>

@@ -51,6 +51,8 @@ export const PanierProvider = ({ children }) => {
     setQuantite(quantite - 1); 
   };
 
+ console.log(produitDansPanier)
+
   return (
     <PanierContext.Provider value={{ produitDansPanier, ajouterProduitPanier, supprimerProduitPanier, incrementQuantite, decrementQuantite }}>
       {children}

@@ -81,7 +81,7 @@ const ListeProduits = () => {
           filteredProduits.map((produit) => (
             <div
               key={produit.id}
-              className="max-w-80 bg-white p-4 rounded-lg mb-4 mr-4 flex-grow flex flex-col justify-between items-center "
+              className="w-80 bg-white p-4 rounded-lg mb-4 mr-4 flex-grow flex flex-col justify-between items-center "
             >
               {/* Contenu du produit */}
               <div className="flex justify-between w-full mb-4">

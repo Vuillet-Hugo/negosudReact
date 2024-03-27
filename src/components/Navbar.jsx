@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PageProduits from "./PageProduits";
-import ContactForm from "./ContactForm";
 import Panier from "./Panier/Panier";
 import Accueil from "./Accueil";
 import PageCarte from "./stripe/PageCarte";
@@ -61,9 +60,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/nouscontacter" className="py-2 px-3 md:p-0 dark:text-white md:dark:hover:text-pink-400  md:dark:hover:bg-transparent"> 
-                Nous contacter
-              </Link>
+              
             </li>
           </ul>
         </div>
@@ -72,7 +69,6 @@ function Navbar() {
     <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/produits" element={<PageProduits />} />
-        <Route path="/nouscontacter" element={<ContactForm />} />
         <Route path="/Panier" element={<Panier />} />
         <Route path="/PageCarte" element={<PageCarte />} />
       </Routes>
